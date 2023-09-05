@@ -4,8 +4,8 @@ os.environ['KIVY_VIDEO'] = 'ffpyplayer'
 import sys
 
 import ffpyplayer
-#from ffpyplayer.player import MediaPlayer
-#from ffpyplayer.tools import set_log_callback, get_log_callback
+from ffpyplayer.player import MediaPlayer
+from ffpyplayer.tools import set_log_callback, get_log_callback
 
 import kivy
 from kivy.app import App
@@ -31,11 +31,14 @@ class HelloWorldApp(App):
         layout = BoxLayout(orientation='vertical')
         # Create a VideoPlayer widget
         video = VideoPlayer(source='ctrl_video2.mp4', state='play', options={'eos': 'loop'})
+        
         # Add the video player to the layout
         layout.add_widget(video)
-
         # Create a Label widget with the text "Hello, World!"
         label = Label(text="Hello, World!")
+
+        # Hide the cursor
+        Window.set_system_cursor("none")
         return layout
     def on_start(self):
         # Full screen
