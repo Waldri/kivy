@@ -8,6 +8,9 @@ from ffpyplayer.player import MediaPlayer
 from ffpyplayer.tools import set_log_callback, get_log_callback
 
 import kivy
+# This line is necessary to configure Kivy's windowing system
+kivy.require("2.0.0")
+
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.app import App
@@ -19,11 +22,13 @@ from glob import glob
 from os.path import dirname, join, basename
 # To full screen
 from kivy.core.window import Window
+Window.show_cursor = False
 # Video player
 from kivy.uix.videoplayer import VideoPlayer
 
-# This line is necessary to configure Kivy's windowing system
-kivy.require("2.0.0")
+Touchring = show_cursor = False
+from kivy.config import Config
+Config.set('graphics','show_cursor','0')
 
 class HelloWorldApp(App):
     def build(self):
