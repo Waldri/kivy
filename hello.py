@@ -1,5 +1,11 @@
 import os
+os.environ['KIVY_BCM_DISPMANX_LAYER'] = '2'
+os.environ['KIVY_VIDEO'] = 'ffpyplayer'
 import sys
+
+import ffpyplayer
+#from ffpyplayer.player import MediaPlayer
+#from ffpyplayer.tools import set_log_callback, get_log_callback
 
 import kivy
 from kivy.app import App
