@@ -13,7 +13,13 @@ sudo apt-get install -y  ffmpeg libavcodec-dev libavdevice-dev libavfilter-dev l
 ``
 # list mouse devices
 less /proc/bus/input/devices | grep mo
+udevadm info --export-db | grep tou
+
 set mouse=event0
 
-# install GPM
+# install GPM 
 sudo apt install gpm
+gpm -m /dev/input/mice -t help
+
+# Config touch
+https://stackoverflow.com/questions/49894375/how-to-use-touchscreen-on-startup-with-kivy
