@@ -26,9 +26,9 @@ Window.show_cursor = False
 # Video player
 from kivy.uix.videoplayer import VideoPlayer
 
-#Touchring = show_cursor = False
-#from kivy.config import Config
-#Config.set('graphics','show_cursor','0')
+Touchring = show_cursor = False
+from kivy.config import Config
+Config.set('graphics','show_cursor','0')
 
 class HelloWorldApp(App):
     def build(self):
