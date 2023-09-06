@@ -22,4 +22,8 @@ sudo apt install gpm
 gpm -m /dev/input/mice -t help
 
 # Config touch
+egalax = hidinput,/dev/input/event0,rotation=0,invert_y=1,invert_x=1
+mtdev_%(name)s = probesysfs,provider=mtdev
+hid_%(name)s = probesysfs,provider=hidinput
+
 https://stackoverflow.com/questions/49894375/how-to-use-touchscreen-on-startup-with-kivy
