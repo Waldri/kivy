@@ -24,6 +24,10 @@ Kivy Launcher Android application. For Android devices, you can
 copy/paste this directory into /sdcard/kivy/showcase on your Android device.
 
 '''
+import os
+os.environ['KIVY_BCM_DISPMANX_LAYER'] = '2'
+os.environ['KIVY_VIDEO'] = 'ffpyplayer'
+import sys
 
 from time import time
 from kivy.app import App
