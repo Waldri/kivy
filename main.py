@@ -125,6 +125,9 @@ class ShowcaseApp(App):
         screen = Builder.load_file(self.available_screens[index])
         self.screens[index] = screen
         return screen
+    def on_start(self):
+        # Full screen
+        Window.fullscreen = 'auto'
 
     def read_sourcecode(self):
         fn = self.available_screens[self.index]
