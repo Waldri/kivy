@@ -22,13 +22,13 @@ from glob import glob
 from os.path import dirname, join, basename
 # To full screen
 from kivy.core.window import Window
-Window.show_cursor = False
+Window.show_cursor = True
 # Video player
 from kivy.uix.videoplayer import VideoPlayer
 
-Touchring = show_cursor = False
+Touchring = show_cursor = True
 from kivy.config import Config
-Config.set('graphics','show_cursor','0')
+Config.set('graphics','show_cursor','1')
 
 class HelloWorldApp(App):
     def build(self):
