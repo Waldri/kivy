@@ -11,3 +11,9 @@ and
 ``
 sudo apt-get install -y  ffmpeg libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev libswscale-dev libswresample-dev libpostproc-dev libsdl2-dev libsdl2-2.0-0 libsdl2-mixer-2.0-0 libsdl2-mixer-dev python3-dev
 ``
+# list mouse devices
+less /proc/bus/input/devices | grep mo
+set mouse=event0
+
+# install GPM
+sudo apt install gpm
