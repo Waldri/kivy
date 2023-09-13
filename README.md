@@ -16,6 +16,7 @@ less /proc/bus/input/devices | grep mo
 udevadm info --export-db | grep tou
 
 set mouse=event0
+evtest
 
 # install GPM 
 sudo apt install gpm
