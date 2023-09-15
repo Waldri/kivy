@@ -20,12 +20,12 @@ and
     less /proc/bus/input/devices | grep mo
     udevadm info --export-db | grep tou
 
-set mouse=event0
-evtest
+    set mouse=event0
+    evtest
 
 # install GPM (virtual mouse CLI)
-sudo apt install gpm
-gpm -m /dev/input/mice -t help
+    sudo apt install gpm
+    gpm -m /dev/input/mice -t help
 
 # Config touch eGalax
     egalax = hidinput,/dev/input/event0,rotation=0,invert_y=1,invert_x=1
