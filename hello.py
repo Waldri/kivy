@@ -1,5 +1,6 @@
 import os
-os.environ['KIVY_BCM_DISPMANX_LAYER'] = '2'
+os.environ['KIVY_BCM_DISPMANX_LAYER'] = '0'
+os.environ['KIVY_BCM_DISPMANX_ID'] = '0'
 os.environ['KIVY_VIDEO'] = 'ffpyplayer'
 import sys
 

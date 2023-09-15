@@ -22,9 +22,33 @@ evtest
 sudo apt install gpm
 gpm -m /dev/input/mice -t help
 
-# Config touch
+# Config touch eGalax
 egalax = hidinput,/dev/input/event0,rotation=0,invert_y=1,invert_x=1
 mtdev_%(name)s = probesysfs,provider=mtdev
 hid_%(name)s = probesysfs,provider=hidinput
 
 https://stackoverflow.com/questions/49894375/how-to-use-touchscreen-on-startup-with-kivy
+
+# Config touch raspberry 7"
+/boot/config.txt:
+``
+[all]
+
+hdmi_force_hotplug=0
+hdmi_group=2
+hdmi_mode=27
+dtoverlay=rpi-display,speed=32000000,rotate=270
+``
+
+root/.kivi/config.ini
+
+``
+
+[input]
+mouse = mouse
+#%(name)s = probesysfs
+#egalax = hidinput,/dev/input/event1,rotation=0,invert_y=1,invert_x=1
+mtdev_%(name)s = probesysfs,provider=mtdev
+hid_%(name)s = probesysfs,provider=hidinput
+
+``

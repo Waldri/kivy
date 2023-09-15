@@ -2,6 +2,8 @@ import kivy
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.core.window import Window
+import os
+os.environ["KIVY_BCM_DISPMANX_ID"] = "4" #LCD
 
 # This line is necessary to configure Kivy's windowing system
 kivy.require("2.0.0")
