@@ -1,5 +1,10 @@
 ### Initiate Virtual Enviroment
 python -m virtualenv kivy_venv
+'kivy_venv\Scripts\activate' (windows)
+'source kivy_venv/bin/activate' (linux)
+
+### Initiate Virtual Enviroment
+python -m virtualenv kivy_venv
 ``kivy_venv\Scripts\activate`` (windows)
 ``source kivy_venv/bin/activate`` (linux)
 
@@ -18,7 +23,7 @@ udevadm info --export-db | grep tou
 set mouse=event0
 evtest
 
-# install GPM 
+# install GPM (virtual mouse CLI)
 sudo apt install gpm
 gpm -m /dev/input/mice -t help
 
