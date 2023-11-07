@@ -22,13 +22,6 @@ ShowcaseScreen:
         orientation: 'horizontal' if tbh.state == 'down' else 'vertical'
 
         AccordionItem:
-            title: 'Video'
-            Video:
-                source:'ctrl_video2.mp4'
-                state:'play'
-                options:{'eos': 'loop'}
-
-        AccordionItem:
             title: 'Musicas'
             Label:
                 text: 'This is a label fit to the content view'
@@ -39,3 +32,10 @@ ShowcaseScreen:
             Label:
                 text: 'This is a label fit to the content view'
                 text_size: self.width, None
+
+        AccordionItem:
+            title: 'Video'
+            Video:
+                source:'ctrl_video2.mp4'
+                state:'play'
+                options:{'eos': 'loop'}
