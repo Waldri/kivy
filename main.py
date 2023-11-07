@@ -64,7 +64,8 @@ class ShowcaseApp(App):
     hierarchy = ListProperty([])
 
     def build(self):
-        self.title = 'hello world'
+        Window.set_system_cursor('none')
+        self.title = 'Controlar'
         Clock.schedule_interval(self._update_clock, 1 / 60.)
         self.screens = {}
         self.available_screens = sorted([
