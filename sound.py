@@ -36,7 +36,7 @@ class HelloWorldApp(App):
         # Create a layout to hold the video player
         layout = BoxLayout(orientation='vertical')
         # Create a VideoPlayer widget
-        video = VideoPlayer(source='ctrl_video2.mp4', state='play', options={'eos': 'loop'})
+        video = VideoPlayer(source='sound.mp4', state='play', options={'eos': 'loop'})
         
         # Add the video player to the layout
         layout.add_widget(video)
